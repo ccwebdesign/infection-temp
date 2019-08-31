@@ -1,0 +1,19 @@
+<phpunit colors="true"
+    verbose="true"
+    stderr="true"
+    beStrictAboutOutputDuringTests="true">
+    <testsuites>
+        <testsuite name="Code">
+            <file>unit/CodeTest.php</file>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="junit" target="./tmp/phpunit.junit.xml" />
+        <log type="coverage-xml" target="./tmp/coverage-xml"/>
+    </logging>
+</phpunit>
