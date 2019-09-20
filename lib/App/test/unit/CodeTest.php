@@ -32,4 +32,16 @@ class CodeTest
 
         $this->assertSame( $value, $actual );
     }
+
+    /**
+     * @test
+     */
+    public function getTest_returns_false_by_default()
+    {
+        $TestClass = new Code();
+
+        $actual = $TestClass->getTest();
+
+        $this->assertFalse( $actual );
+    }
 }
